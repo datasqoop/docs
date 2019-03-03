@@ -59,3 +59,10 @@ psql -p 9700 -c "select * from master_get_active_worker_nodes();"
 You should see a row for each worker node including the node name and port.
 
 At this step, you have completed the installation process and are ready to use your Citus cluster.
+
+
+5. Create a new container and attach
+docker run -it -p 5432:5432 --name citus devserver:v0.1 bash
+
+--------------------------------------------------------------------------------------------------------------
+docker run --name citus_standalone -p 5432:5432 citusdata/citus
